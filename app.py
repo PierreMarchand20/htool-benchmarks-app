@@ -145,8 +145,8 @@ def make_dashboard(data, title, defaults):
     return pn.Column(
         f"## {title}",
         pn.Row(
-            # sidebar,
-            # plot_bench,
+            sidebar,
+            plot_bench,
         ),
     )
 
@@ -174,10 +174,10 @@ dashboard_facto = make_dashboard(
     title="HMatrix factorization",
     defaults={},
 )
-app = pn.Column("test ")
-# app = pn.Tabs(
-#     ("HMatrix assembly", dashboard_build),
-#     ("HMatrix factorization", dashboard_facto),
-# )
+
+app = pn.Tabs(
+    ("HMatrix assembly", dashboard_build),
+    ("HMatrix factorization", dashboard_facto),
+)
 
 app.servable()

@@ -1,3 +1,4 @@
 panel>=1.4
 pandas>=2.0
 plotly>=5.0
+bokeh==3.9.0
