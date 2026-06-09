@@ -36,7 +36,7 @@ jobs:
       - name: Buid app
         run: |
           pip install -r requirements.txt
-          panel convert app.py --to pyodide-worker --out ../public --resources data/bench_hmatrix_build_vs_pbl_size.csv
+          panel convert app.py --to pyodide-worker --out public --resources data/bench_hmatrix_build_vs_pbl_size.csv
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
